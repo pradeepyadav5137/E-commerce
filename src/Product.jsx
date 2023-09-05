@@ -53,7 +53,7 @@ cart.map((crt, index)=>{
   
   <li key={index}>{
     <>
-    <img id="pratibha"  src={crt.image} alt="" />
+    <img id="cartdetails"  src={crt.image} alt="" />
     <span>{crt.title}</span>
     </>
   }
