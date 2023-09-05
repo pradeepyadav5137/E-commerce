@@ -42,7 +42,7 @@ function Products() {
       <div className="cart-position"
         style={{ right: cartInview ? "0" : "-450px" }}>
         <div className="handle" onClick={slideCartIntoView}>
-          Cart <ShoppingCartIcon />
+        <ShoppingCartIcon /> Cart 
         </div>
         <ul className="cartitems">
           {
