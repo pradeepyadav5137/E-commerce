@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import {reactRouting} from './App'
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 
 function Header() {
+
+  const{ cart} = useContext(reactRouting)
   return (
     <header>
       <div className="flex">
@@ -26,6 +31,10 @@ function Header() {
         </li>
         <li>
           <Link to="/contact">Contact Us</Link>
+        </li>
+        
+        <li>
+          <Link to="/carts">Cart<ShoppingCartIcon/><span id="cartLength">{cart.length}</span></Link>
         </li>
       </ul>
       </div>

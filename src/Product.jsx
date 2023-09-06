@@ -1,11 +1,15 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import React, {useContext, useEffect, useState } from "react";
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import {reactRouting} from './App'
+// import Carts from './Carts'
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [cartInview, setCartInView] = useState(false)
+
+  const{ cart ,setCart} = useContext(reactRouting)
+  // const [cart, setCart] = useState([]);
+  // const [cartInview, setCartInView] = useState(false)
 
 
   useEffect(() => {
@@ -33,40 +37,40 @@ function Products() {
     );
   }
 
-  function slideCartIntoView() {
-    setCartInView(!cartInview)
-  }
+  // function slideCartIntoView() {
+  //   setCartInView(!cartInview)
+  // }
 
-  function Carts() {
-    return (
-      <div className="cart-position"
-        style={{ right: cartInview ? "0" : "-450px" }}>
-        <div className="handle" onClick={slideCartIntoView}>
-        <ShoppingCartIcon /> Cart 
-        </div>
-        <ul className="cartitems">
-          {
-            cart.map((crt, index) => {
-              return (
-                <li key={index}>{
-                  <>
-                    <img id="cartdetails" src={crt.image} alt="" />
-                    <span>{crt.title}</span>
-                  </>
-                }
-                </li>
-              )
-            })
-          }
-        </ul>
-      </div>
-    )
-  }
+  // function Carts() {
+  //   return (
+  //     <div className="cart-position"
+  //       style={{ right: cartInview ? "0" : "-450px" }}>
+  //       <div className="handle" onClick={slideCartIntoView}>
+  //       <ShoppingCartIcon /> Cart 
+  //       </div>
+  //       <ul className="cartitems">
+  //         {
+  //           cart.map((crt, index) => {
+  //             return (
+  //               <li key={index}>{
+  //                 <>
+  //                   <img id="cartdetails" src={crt.image} alt="" />
+  //                   <span>{crt.title}</span>
+  //                 </>
+  //               }
+  //               </li>
+  //             )
+  //           })
+  //         }
+  //       </ul>
+  //     </div>
+  //   )
+  // }
 
   // console.log(cart);
   return (
     <>
-      <Carts />
+      {/* <Carts /> */}
       <div className="products content">
         <h2>Products</h2>
         <div className="product-wrapper">

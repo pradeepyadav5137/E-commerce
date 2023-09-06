@@ -71,7 +71,7 @@ margin: auto;
 
 }
 textarea{
-    margin-left: 435px;
+    margin-left: 586px;
     height: 200px;
     width: 340px;
 } 
@@ -120,8 +120,32 @@ textarea{
 }
 
 #cartdetails{
-    height: 55px;
-    width: 20%;
+    /* height: 55px;
+    width: 20%; */
+    height: 88px;
+    width: 10%;
+    margin-right: 30px;
+}
+
+#cartLength{
+    height: 30px;
+    width: 30px;
+    padding: 2px 7px ;
+    border-radius:50%;
+    background-color: black;
+    color: white;
+}
+
+#CartFlex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+#button{
+margin-left: 590px;
+font-size: 20px;
 }
 
 
